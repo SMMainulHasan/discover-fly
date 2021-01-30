@@ -1,4 +1,4 @@
-
+//Plus minus button function
 function plusMinusTicketQuantity(booleanIncreaseQuantity, setType, booleanFirstClass) {
     const ticketQuantity = document.getElementById(setType + '-qty');
     const numberOfTicket = parseInt(ticketQuantity.value);
@@ -12,10 +12,9 @@ function plusMinusTicketQuantity(booleanIncreaseQuantity, setType, booleanFirstC
     totalCalculation(booleanFirstClass);
 }
 
-
+//Brake Down Plus minus button function
 function totalCalculation(booleanFirstClass) {
     const subtotal = document.getElementById('subtotal');
-
     const firstClassQuantity = document.getElementById('first-class-qty');
     const firstClassQuantityNum = parseInt(firstClassQuantity.value);
     const economyQuantity = document.getElementById('economy-qty');
@@ -35,4 +34,20 @@ function totalCalculation(booleanFirstClass) {
 
     let total = subtotalCost + vat;
     document.getElementById('total').innerText = ('$'+ total);
+}
+
+
+// Modal --//confirmation//
+function sendQuantityToModal(idTo, idFrom){
+    document.getElementById(idTo).innerText = document.getElementById(idFrom).value;
+}
+
+function sendCostToModal(idTo, idFrom){
+    document.getElementById(idTo).innerText = document.getElementById(idFrom).innerText;
+}
+
+function confirmBooking(){
+    sendQuantityToModal('modal-first-qty','first-class-qty');
+    sendQuantityToModal('modal-economy-qty','economy-qty');
+    sendCostToModal('modal-total','total');
 }
