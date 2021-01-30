@@ -57,9 +57,10 @@
                     <label for="">First Class ($150)</label>
                     <div class="d-flex">
                         <input id="first-class-qty" class="inp-style inp-width" type="number" name="" value="0">
-                        <button onclick="plusMinusTicketQuantity(false, 'first-class',true)" class="btn btn-default"><i class="fas fa-minus"></i></button>
+                        <button onclick="plusMinusTicketQuantity(false, 'first-class',true)" class="btn btn-default"><i
+                                class="fas fa-minus"></i></button>
                         <button onclick="plusMinusTicketQuantity(true, 'first-class', true)" class="btn btn-default"><i
-                        class="fas fa-plus"></i></button>
+                                class="fas fa-plus"></i></button>
                     </div>
                 </div>
             </div>
@@ -69,8 +70,10 @@
                     <label for="">Economy ($100)</label>
                     <div class="d-flex">
                         <input id="economy-qty" class="inp-style inp-width" type="number" name="" value="0">
-                        <button onclick="plusMinusTicketQuantity(false, 'economy', false)" class="btn btn-default"><i class="fas fa-minus"></i></button>
-                        <button onclick="plusMinusTicketQuantity(true, 'economy', false)" class="btn btn-default"><i class="fas fa-plus"></i></button>
+                        <button onclick="plusMinusTicketQuantity(false, 'economy', false)" class="btn btn-default"><i
+                                class="fas fa-minus"></i></button>
+                        <button onclick="plusMinusTicketQuantity(true, 'economy', false)" class="btn btn-default"><i
+                                class="fas fa-plus"></i></button>
                     </div>
                 </div>
             </div>
@@ -102,8 +105,25 @@
                     </div>
                 </div>
             </div>
-            <button class="btn-style">Book Now</button>
+            <button data-bs-toggle="modal" data-bs-target="#Modal-book" id="book-now" class="btn-style">Book Now</button>
         </div>
+        <!-- modal -->
+    <div id="Modal-book" class="modal" tabindex="-1">
+        <div class="modal-dialog modal-dialog-centered">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h5 class="modal-title">Booking Flights</h5>
+              <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+              <p>Modal body text goes here.</p>
+            </div>
+            <div class="modal-footer">
+              <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Confirm</button>
+            </div>
+          </div>
+        </div>
+      </div>
 
         <div class="booking-content">
             <h1>discover <br> around the world</h1>
